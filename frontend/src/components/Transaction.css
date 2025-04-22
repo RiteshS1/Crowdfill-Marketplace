@@ -1,0 +1,307 @@
+.transaction-section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .transaction-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  }
+  
+  .tabs {
+    display: flex;
+    background-color: var(--darker);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .tab {
+    padding: 1.2rem 1.5rem;
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    font-weight: 500;
+  }
+  
+  .tab.active {
+    color: var(--primary);
+    font-weight: 600;
+  }
+  
+  .tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+  }
+  
+  .tab-content {
+    padding: 2rem;
+  }
+  
+  /* Create Order Tab */
+  .create-order h3 {
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background-color: var(--darker);
+    color: var(--light);
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+  }
+  
+  .form-actions {
+    margin: 2rem 0;
+  }
+  
+  .approve-btn,
+  .create-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .approve-btn {
+    background: linear-gradient(135deg, var(--warning) 0%, #f0b445 100%);
+    color: var(--darker);
+  }
+  
+  .approve-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(253, 203, 110, 0.3);
+  }
+  
+  .create-btn {
+    background: linear-gradient(135deg, var(--success) 0%, #00a383 100%);
+    color: white;
+  }
+  
+  .create-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 184, 148, 0.3);
+  }
+  
+  .approve-btn:disabled,
+  .create-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .order-summary {
+    background-color: var(--darker);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  
+  .order-summary h4 {
+    margin-bottom: 1.2rem;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .summary-row span:first-child {
+    color: var(--light);
+    opacity: 0.7;
+  }
+  
+  .summary-row span:last-child {
+    font-weight: 600;
+  }
+  
+  /* Transaction History Tab */
+  .transaction-history h3 {
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .transaction-item {
+    background-color: var(--darker);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .transaction-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tx-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+  
+  .tx-header h4 {
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+  
+  .status {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .status.pending {
+    background-color: var(--warning);
+    color: var(--darker);
+  }
+  
+  .status.success {
+    background-color: var(--success);
+    color: white;
+  }
+  
+  .tx-description {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .tx-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+  
+  .tx-link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .tx-link:hover {
+    color: var(--secondary);
+  }
+  
+  .tx-time {
+    opacity: 0.7;
+  }
+  
+  .no-transactions {
+    text-align: center;
+    padding: 3rem;
+    opacity: 0.7;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .tab-content {
+      padding: 1.5rem;
+    }
+  
+    .tabs {
+      flex-direction: column;
+    }
+  
+    .tab {
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .tab.active::after {
+      height: 2px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .tab-content {
+      padding: 1rem;
+    }
+  
+    .create-order h3,
+    .transaction-history h3 {
+      font-size: 1.3rem;
+    }
+  
+    .form-group label {
+      font-size: 0.9rem;
+    }
+  
+    .form-group input {
+      padding: 0.8rem;
+    }
+  
+    .approve-btn,
+    .create-btn {
+      padding: 0.8rem;
+    }
+  
+    .order-summary {
+      padding: 1rem;
+    }
+  }
+  

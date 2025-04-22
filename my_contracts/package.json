@@ -1,0 +1,26 @@
+{
+  "name": "crowdfill-marketplace",
+  "version": "1.0.0",
+  "description": "Decentralized OTC marketplace for ERC20 tokens",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "smart-contracts",
+    "defi",
+    "otc"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.17.0"
+  }
+}

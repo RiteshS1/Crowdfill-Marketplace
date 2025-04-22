@@ -1,0 +1,258 @@
+.footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 4rem 0 2rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-logo h2 {
+    font-family: var(--font-heading, system-ui, sans-serif);
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin: 0;
+  }
+  
+  .footer-tagline {
+    font-family: var(--font-sans, system-ui, sans-serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--light);
+  }
+  
+  .footer-description {
+    font-size: 0.9rem;
+    color: var(--light);
+    opacity: 0.7;
+    max-width: 350px;
+    line-height: 1.6;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer-links-column h3 {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .footer-links-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links-column ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-links-column ul li a {
+    color: var(--light);
+    opacity: 0.8;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links-column ul li a:hover {
+    color: var(--primary);
+    opacity: 1;
+  }
+  
+  .footer-contracts {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    border: 1px solid var(--border);
+  }
+  
+  .contract-info h3 {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .contract-addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .contract-address {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .contract-label {
+    font-size: 0.9rem;
+    color: var(--light);
+    opacity: 0.7;
+  }
+  
+  .contract-link {
+    font-family: monospace;
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+  }
+  
+  .contract-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--light);
+    transition: all 0.2s;
+  }
+  
+  .social-icon:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .footer-copyright {
+    text-align: center;
+  }
+  
+  .footer-copyright p {
+    font-size: 0.9rem;
+    color: var(--light);
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .footer-legal a {
+    font-size: 0.8rem;
+    color: var(--light);
+    opacity: 0.7;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  
+  .footer-legal a:hover {
+    color: var(--primary);
+    opacity: 1;
+  }
+  
+  .divider {
+    font-size: 0.8rem;
+    color: var(--light);
+    opacity: 0.4;
+  }
+  
+  @media (max-width: 992px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    .footer-brand {
+      text-align: center;
+      align-items: center;
+    }
+  
+    .footer-description {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 3rem 0 1.5rem;
+    }
+  
+    .footer-links {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1rem;
+    }
+  
+    .contract-addresses {
+      flex-direction: column;
+    }
+  
+    .contract-address {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer-container {
+      padding: 0 1rem;
+    }
+  
+    .footer-links {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .footer-social {
+      gap: 1rem;
+    }
+  }
+  
