@@ -81,6 +81,3 @@ await crowdfill.closeOrder(orderId);
 - Pausable for emergency stops
 - Ownable for admin functions
 - Gas optimizations for cost efficiency
-
-## License
-MIT 
